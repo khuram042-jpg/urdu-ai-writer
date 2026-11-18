@@ -1,0 +1,32 @@
+// All page content lives here. Edit text, then run: npm run build
+export const site = process.env.SITE_URL || 'https://YOUR-DOMAIN.pages.dev';
+export const pages = [
+ { slug: '', title: 'Urdu Voice to Text and Content Writer | اردو وائس ٹو کونٹینٹ',
+   desc: 'Speak in Urdu and get text, YouTube scripts, blog posts and social captions. Try it in your browser.',
+   h1: 'اردو میں بولیں، تحریر پائیں',
+   lead: 'مائیک دبائیں، اردو میں بات کریں، اور اپنی آواز کو متن، یوٹیوب اسکرپٹ، بلاگ یا سوشل میڈیا پوسٹ میں بدلیں۔',
+   body: ['<h2>آپ کیا بنا سکتے ہیں</h2><ul><li><a href="/urdu-voice-to-text/">اردو وائس ٹو ٹیکسٹ</a>: بولیں اور متن کاپی کریں۔</li><li><a href="/urdu-youtube-script-generator/">یوٹیوب اسکرپٹ</a>: ٹائٹل، شروعاتی جملہ اور مکمل اسکرپٹ۔</li><li><a href="/urdu-blog-article-writer/">بلاگ آرٹیکل</a>: عنوانات اور میٹا ڈسکرپشن کے ساتھ مضمون۔</li><li><a href="/urdu-social-media-captions/">سوشل میڈیا پوسٹ</a>: فیس بک، انسٹاگرام اور لنکڈ ان کے لیے۔</li></ul>',
+          '<h2>یہ کیسے کام کرتا ہے</h2><p>آواز پہچاننے کا کام آپ کا براؤزر کرتا ہے (Chrome یا Edge بہترین ہیں)۔ تحریر تیار کرنے کے لیے متن Google Gemini کو بھیجا جاتا ہے۔ نتیجہ ہمیشہ خود پڑھ کر درست کریں۔</p>'] },
+ { slug: 'urdu-voice-to-text', format: 'transcript', title: 'Urdu Voice to Text Online | اردو وائس ٹو ٹیکسٹ',
+   desc: 'Dictate in Urdu and copy the text. Works in Chrome and Edge with your microphone.',
+   h1: 'اردو وائس ٹو ٹیکسٹ', lead: 'مائیک دبائیں اور بولیں۔ متن نیچے ظاہر ہوگا، پھر اسے ایڈٹ یا کاپی کریں۔',
+   body: ['<h2>بہتر نتیجے کے لیے</h2><ul><li>خاموش جگہ اور اچھا مائیک استعمال کریں۔</li><li>جملوں کے درمیان ہلکا وقفہ دیں۔</li><li>Chrome یا Edge استعمال کریں؛ Firefox میں یہ سہولت دستیاب نہیں۔</li></ul>'] },
+ { slug: 'urdu-youtube-script-generator', format: 'youtube', title: 'Urdu YouTube Script Generator | یوٹیوب اسکرپٹ',
+   desc: 'Turn an Urdu voice note into YouTube title ideas, an opening hook, a script and tags.',
+   h1: 'اردو یوٹیوب اسکرپٹ جنریٹر', lead: 'اپنا آئیڈیا بولیں یا لکھیں۔ آپ کو ٹائٹل، شروعاتی جملہ، اسکرپٹ، ڈسکرپشن اور ٹیگز ملیں گے۔',
+   body: ['<h2>کیا ملتا ہے</h2><p>پانچ ٹائٹل تجاویز، پہلے پندرہ سیکنڈ کا ہک، منظر بہ منظر اسکرپٹ، چیپٹر ٹائم اسٹیمپس اور تلاش کے ٹیگز۔</p>'] },
+ { slug: 'urdu-blog-article-writer', format: 'article', title: 'Urdu Blog Article Writer | اردو بلاگ آرٹیکل',
+   desc: 'Create a structured Urdu blog article with headings and a meta description from your notes.',
+   h1: 'اردو بلاگ آرٹیکل رائٹر', lead: 'موضوع یا نکات بولیں۔ آپ کو عنوان، ذیلی عنوانات، مضمون اور میٹا ڈسکرپشن ملے گی۔',
+   body: ['<h2>اشاعت سے پہلے</h2><p>اے آئی کا لکھا مسودہ ہے۔ حقائق، اعداد اور نام خود جانچیں، پھر شائع کریں۔</p>'] },
+ { slug: 'urdu-social-media-captions', format: 'social', title: 'Urdu Social Media Caption Generator | سوشل میڈیا پوسٹ',
+   desc: 'Write Urdu captions for Facebook, Instagram and LinkedIn from a short voice note.',
+   h1: 'سوشل میڈیا پوسٹ جنریٹر', lead: 'اپنی بات بتائیں۔ فیس بک، انسٹاگرام اور لنکڈ ان کے لیے الگ الگ پوسٹ تیار ہوگی۔',
+   body: ['<h2>ہر پلیٹ فارم کے لیے</h2><p>ہر پوسٹ کی لمبائی اور انداز پلیٹ فارم کے مطابق ہوتا ہے۔ ہیش ٹیگ شامل کرنا آپ کی مرضی ہے۔</p>'] },
+ { slug: 'about', title: 'About Urdu Voice-to-Content', desc: 'What this tool does, how it works, and its limits.',
+   h1: 'ہمارے بارے میں', lead: 'یہ اردو بولنے والے تخلیق کاروں کے لیے ایک چھوٹا سا ٹول ہے۔',
+   body: ['<p>آپ بولتے ہیں، براؤزر متن بناتا ہے، اور اے آئی اسے مطلوبہ شکل دیتا ہے۔ آواز کی درستگی مائیک، لہجے اور شور پر منحصر ہے، اس لیے ہر نتیجہ خود دیکھ لیں۔</p><p>رابطہ: <a href="mailto:khuram042@gmail.com">khuram042@gmail.com</a></p>'] },
+ { slug: 'privacy', sitemap: false, title: 'Privacy Policy', desc: 'How this site handles your data.',
+   h1: 'پرائیویسی پالیسی', lead: 'اس صفحے کو شائع کرنے سے پہلے اپنی اصل صورتحال کے مطابق جانچ لیں۔',
+   body: ['<p>سائن اپ ضروری نہیں۔ آواز کی پہچان آپ کے براؤزر کی سروس سے ہوتی ہے۔ مواد تیار کرتے وقت آپ کا متن Google Gemini API کو بھیجا جاتا ہے۔ ہم متن اپنے سرور پر محفوظ نہیں کرتے۔ تجزیاتی ٹولز استعمال ہوں تو یہاں لکھیں۔</p>'] }
+];
