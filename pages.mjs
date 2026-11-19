@@ -1,6 +1,5 @@
 // All page content lives here. Edit text, then run: npm run build
-export const site = process.env.SITE_URL || 'https://YOUR-DOMAIN.pages.dev';
-export const pages = [
+'https://urdu-ai-writer-content.khuram042.workers.dev';
  { slug: '', title: 'Urdu Voice to Text and Content Writer | اردو وائس ٹو کونٹینٹ',
    desc: 'Speak in Urdu and get text, YouTube scripts, blog posts and social captions. Try it in your browser.',
    h1: 'اردو میں بولیں، تحریر پائیں',
