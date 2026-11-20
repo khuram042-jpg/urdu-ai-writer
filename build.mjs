@@ -14,7 +14,7 @@ ${p.format === 'transcript' ? '' : '<label for="out">نتیجہ</label><div id="
 const ld = p => p.slug ? '' : `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Urdu Voice-to-Content', url: url(p), applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web', inLanguage: ['ur', 'en'], description: p.desc })}</script>`;
 for (const p of pages) {
   const dir = p.slug ? `dist/${p.slug}` : 'dist'; mkdirSync(dir, { recursive: true });
-  writeFileSync(`${dir}/index.html`, `<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  writeFileSync(`${dir}/index.html`, `<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="google-site-verification" content="kVzrtxtps4NZsp3dO2X-IM14ZqBp4mzgRr_wHbltjmk"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${p.title}</title><meta name="description" content="${p.desc}"><link rel="canonical" href="${url(p)}">
 <meta property="og:title" content="${p.title}"><meta property="og:description" content="${p.desc}"><meta property="og:url" content="${url(p)}"><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
