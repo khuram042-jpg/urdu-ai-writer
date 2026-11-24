@@ -19,6 +19,7 @@ for (const p of pages) {
 <meta property="og:title" content="${p.title}"><meta property="og:description" content="${p.desc}"><meta property="og:url" content="${url(p)}"><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Nastaliq+Urdu:wght@600&display=swap">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/style.css">${ld(p)}</head><body>
 <header><nav aria-label="مین مینو">${nav}</nav></header>
 <main><h1>${p.h1}</h1><p class="lead">${p.lead}</p>${tool(p)}${p.body.join('')}</main>
