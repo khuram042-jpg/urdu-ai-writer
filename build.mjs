@@ -16,15 +16,7 @@ for (const p of pages) {
   const dir = p.slug ? `dist/${p.slug}` : 'dist'; mkdirSync(dir, { recursive: true });
   writeFileSync(`${dir}/index.html`, `<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8">
 <script src="/consent.js" defer></script>
-  gtag('consent', 'default', {
-  'analytics_storage': 'denied',
-  'ad_storage': 'denied',
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied'
-});
-  gtag('js', new Date());
-  gtag('config', 'G-G24LN95BP3');
-</script><meta name="google-site-verification" content="kVzrtxtps4NZsp3dO2X-IM14ZqBp4mzgRr_wHbltjmk"><meta name="viewport" content="width=device-width,initial-scale=1">
+ </script><meta name="google-site-verification" content="kVzrtxtps4NZsp3dO2X-IM14ZqBp4mzgRr_wHbltjmk"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${p.title}</title><meta name="description" content="${p.desc}"><link rel="canonical" href="${url(p)}">
 <meta property="og:title" content="${p.title}"><meta property="og:description" content="${p.desc}"><meta property="og:url" content="${url(p)}"><meta property="og:type" content="website">
 <meta property="og:image" content="https://urdu-ai-writer-content.khuram042.workers.dev/og-image.png">
