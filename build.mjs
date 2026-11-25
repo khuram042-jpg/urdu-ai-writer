@@ -20,6 +20,12 @@ for (const p of pages) {
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied'
+});
   gtag('js', new Date());
   gtag('config', 'G-G24LN95BP3');
 </script><meta name="google-site-verification" content="kVzrtxtps4NZsp3dO2X-IM14ZqBp4mzgRr_wHbltjmk"><meta name="viewport" content="width=device-width,initial-scale=1">
