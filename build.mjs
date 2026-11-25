@@ -15,6 +15,7 @@ const ld = p => p.slug ? '' : `<script type="application/ld+json">${JSON.stringi
 for (const p of pages) {
   const dir = p.slug ? `dist/${p.slug}` : 'dist'; mkdirSync(dir, { recursive: true });
   writeFileSync(`${dir}/index.html`, `<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8">
+  <script src="/consent.js" defer></script>
 <title>${p.title}</title><meta name="description" content="${p.desc}"><link rel="canonical" href="${url(p)}">
 <meta property="og:title" content="${p.title}"><meta property="og:description" content="${p.desc}"><meta property="og:url" content="${url(p)}"><meta property="og:type" content="website">
 <meta property="og:image" content="https://urdu-ai-writer-content.khuram042.workers.dev/og-image.png">
