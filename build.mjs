@@ -19,6 +19,7 @@ for (const p of pages) {
 <meta property="og:title" content="${p.title}"><meta property="og:description" content="${p.desc}"><meta property="og:url" content="${url(p)}"><meta property="og:type" content="website">
 <meta property="og:image" content="https://urdu-ai-writer-content.khuram042.workers.dev/og-image.png">
 <meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Urdu AI Writer - Free Urdu Voice to Text and AI Content Tools">
 <meta property="og:site_name" content="Urdu AI Writer">
 <meta property="og:locale" content="ur_PK">
 <meta name="twitter:card" content="summary_large_image">
