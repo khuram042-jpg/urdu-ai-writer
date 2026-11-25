@@ -21,6 +21,11 @@ for (const p of pages) {
 <meta property="og:image:type" content="image/png">
 <meta property="og:site_name" content="Urdu AI Writer">
 <meta property="og:locale" content="ur_PK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${p.title}">
+<meta name="twitter:description" content="${p.desc}">
+<meta name="twitter:image" content="https://urdu-ai-writer-content.khuram042.workers.dev/og-image.png">
+<meta name="twitter:image:alt" content="Urdu AI Writer - Free Online AI Tools">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Nastaliq+Urdu:wght@600&display=swap">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
