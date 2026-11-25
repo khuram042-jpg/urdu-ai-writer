@@ -1,5 +1,5 @@
 (() => {
-  const ID = 'G-G24LN95BP3';
+  const ID = 'G-T06FSF9KHK';
   const KEY = 'urdu_ai_cookie_consent';
   let loaded = false;
 
