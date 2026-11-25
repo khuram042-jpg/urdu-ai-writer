@@ -15,7 +15,7 @@ const ld = p => p.slug ? '' : `<script type="application/ld+json">${JSON.stringi
 for (const p of pages) {
   const dir = p.slug ? `dist/${p.slug}` : 'dist'; mkdirSync(dir, { recursive: true });
   writeFileSync(`${dir}/index.html`, `<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8">
-<!-- Google tag (gtag.js) -->
+<script src="/consent.js" defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G24LN95BP3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
