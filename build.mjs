@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync, cpSync, rmSync } from 'fs';
 import { site, pages } from './pages.mjs';
 rmSync('dist', { recursive: true, force: true });
 mkdirSync('dist', { recursive: true });
-for (const f of ['style.css', 'app.js', 'favicon.svg']) cpSync(f, 'dist/' + f);
+for (const f of ['style.css', 'app.js', 'favicon.svg', 'og-image.png']) cpSync(f, 'dist/' + f);
 const url = p => `${site}/${p.slug ? p.slug + '/' : ''}`;
 const nav = pages.filter(p => ['', 'urdu-voice-to-text', 'urdu-youtube-script-generator', 'urdu-blog-article-writer', 'urdu-social-media-captions'].includes(p.slug))
   .map(p => `<a href="/${p.slug ? p.slug + '/' : ''}">${p.slug ? p.h1 : 'ہوم'}</a>`).join('');
