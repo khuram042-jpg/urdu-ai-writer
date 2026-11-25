@@ -17,6 +17,10 @@ for (const p of pages) {
   writeFileSync(`${dir}/index.html`, `<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="google-site-verification" content="kVzrtxtps4NZsp3dO2X-IM14ZqBp4mzgRr_wHbltjmk"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${p.title}</title><meta name="description" content="${p.desc}"><link rel="canonical" href="${url(p)}">
 <meta property="og:title" content="${p.title}"><meta property="og:description" content="${p.desc}"><meta property="og:url" content="${url(p)}"><meta property="og:type" content="website">
+<meta property="og:image" content="https://urdu-ai-writer-content.khuram042.workers.dev/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:site_name" content="Urdu AI Writer">
+<meta property="og:locale" content="ur_PK">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Nastaliq+Urdu:wght@600&display=swap">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
