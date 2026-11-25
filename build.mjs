@@ -16,10 +16,6 @@ for (const p of pages) {
   const dir = p.slug ? `dist/${p.slug}` : 'dist'; mkdirSync(dir, { recursive: true });
   writeFileSync(`${dir}/index.html`, `<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8">
 <script src="/consent.js" defer></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G24LN95BP3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
   'analytics_storage': 'denied',
   'ad_storage': 'denied',
