@@ -47,16 +47,48 @@
       'https://www.googletagmanager.com/gtag/js?id=' + ID;
     document.head.appendChild(script);
   }
+function disableAnalytics() {
+  window['ga-disable-' + ID] = true;
 
-  function disableAnalytics() {
-    window['ga-disable-' + ID] = true;
+  const domains = [''];
+  const parts = location.hostname.split('.');
 
-    if (window.gtag) {
-      gtag('consent', 'update', {
-        analytics_storage: 'denied'
-      });
+  for (let i = 0; i < parts.length - 1; i++) {
+    domains.push(parts.slice(i).join('.'));
+  }
+
+  const names = new Set([
+    '_ga',
+    '_ga_' + ID.replace('G-', ''),
+    '_gid',
+    '_gat'
+  ]);
+
+  document.cookie.split(';').forEach(cookie => {
+    const name = cookie.split('=')[0].trim();
+
+    if (
+      name === '_ga' ||
+      name.startsWith('_ga_') ||
+      name === '_gid' ||
+      name.startsWith('_gat')
+    ) {
+      names.add(name);
     }
+  });
 
+  names.forEach(name => {
+    domains.forEach(domain => {
+      document.cookie =
+        name +
+        '=; Max-Age=0;' +
+        ' Expires=Thu, 01 Jan 1970 00:00:00 GMT;' +
+        ' Path=/;' +
+        (domain ? ' Domain=' + domain + ';' : '') +
+        ' Secure; SameSite=Lax';
+    });
+  });
+}
     document.cookie.split(';').forEach(cookie => {
       const name = cookie.split('=')[0].trim();
 
