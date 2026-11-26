@@ -1,3 +1,4 @@
+
 (() => {
   const ID = 'G-T06FSF9KHK';
   const KEY = 'urdu_ai_cookie_consent';
@@ -23,20 +24,21 @@
 
     window['ga-disable-' + ID] = false;
     window.dataLayer = window.dataLayer || [];
+
     window.gtag = function () {
       window.dataLayer.push(arguments);
     };
 
-    gtag('consent', 'default', {
+    window.gtag('consent', 'default', {
       analytics_storage: 'granted',
       ad_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied'
     });
 
-    gtag('js', new Date());
+    window.gtag('js', new Date());
 
-    gtag('config', ID, {
+    window.gtag('config', ID, {
       allow_google_signals: false,
       allow_ad_personalization_signals: false
     });
@@ -45,60 +47,50 @@
     script.async = true;
     script.src =
       'https://www.googletagmanager.com/gtag/js?id=' + ID;
+
     document.head.appendChild(script);
   }
-function disableAnalytics() {
-  window['ga-disable-' + ID] = true;
 
-  const domains = [''];
-  const parts = location.hostname.split('.');
+  function disableAnalytics() {
+    window['ga-disable-' + ID] = true;
 
-  for (let i = 0; i < parts.length - 1; i++) {
-    domains.push(parts.slice(i).join('.'));
-  }
+    const domains = [''];
+    const parts = location.hostname.split('.');
 
-  const names = new Set([
-    '_ga',
-    '_ga_' + ID.replace('G-', ''),
-    '_gid',
-    '_gat'
-  ]);
-
-  document.cookie.split(';').forEach(cookie => {
-    const name = cookie.split('=')[0].trim();
-
-    if (
-      name === '_ga' ||
-      name.startsWith('_ga_') ||
-      name === '_gid' ||
-      name.startsWith('_gat')
-    ) {
-      names.add(name);
+    for (let i = 0; i < parts.length - 1; i++) {
+      domains.push(parts.slice(i).join('.'));
     }
-  });
 
-  names.forEach(name => {
-    domains.forEach(domain => {
-      document.cookie =
-        name +
-        '=; Max-Age=0;' +
-        ' Expires=Thu, 01 Jan 1970 00:00:00 GMT;' +
-        ' Path=/;' +
-        (domain ? ' Domain=' + domain + ';' : '') +
-        ' Secure; SameSite=Lax';
-    });
-  });
-}
+    const names = new Set([
+      '_ga',
+      '_ga_' + ID.replace('G-', ''),
+      '_gid',
+      '_gat'
+    ]);
+
     document.cookie.split(';').forEach(cookie => {
       const name = cookie.split('=')[0].trim();
 
-      if (name === '_ga' || name.startsWith('_ga_')) {
-        document.cookie = name +
-          '=; Max-Age=0; path=/';
-        document.cookie = name +
-          '=; Max-Age=0; path=/; domain=' +
-          location.hostname;
+      if (
+        name === '_ga' ||
+        name.startsWith('_ga_') ||
+        name === '_gid' ||
+        name.startsWith('_gat')
+      ) {
+        names.add(name);
       }
+    });
+
+    names.forEach(name => {
+      domains.forEach(domain => {
+        document.cookie =
+          name +
+          '=; Max-Age=0;' +
+          ' Expires=Thu, 01 Jan 1970 00:00:00 GMT;' +
+          ' Path=/;' +
+          (domain ? ' Domain=' + domain + ';' : '') +
+          ' Secure; SameSite=Lax';
+      });
     });
   }
 
@@ -133,7 +125,7 @@ function disableAnalytics() {
         🍪 Cookie Preferences
       </h3>
 
-      <p style="font-size:14px;line-height:1.7">
+      <p dir="ltr" style="font-size:14px;line-height:1.7">
         We use optional analytics cookies to
         improve our website.
       </p>
@@ -192,12 +184,7 @@ function disableAnalytics() {
     document.getElementById('cookie-accept').onclick = () => {
       saveConsent('accepted');
       banner.style.display = 'none';
-
-      if (loaded) {
-        location.reload();
-      } else {
-        enableAnalytics();
-      }
+      enableAnalytics();
     };
 
     document.getElementById('cookie-reject').onclick = () => {
@@ -213,9 +200,12 @@ function disableAnalytics() {
     if (consent === 'accepted') {
       banner.style.display = 'none';
       enableAnalytics();
-    } else if (consent === 'rejected') {
-      banner.style.display = 'none';
+    } else {
       disableAnalytics();
+
+      if (consent === 'rejected') {
+        banner.style.display = 'none';
+      }
     }
   }
 
